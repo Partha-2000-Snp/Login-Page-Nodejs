@@ -5,6 +5,10 @@ const path = require('path');
 const app = express();
 const PORT = 80;
 
+const appInsights = require('applicationinsights');
+appInsights.setup('<YOUR_INSTRUMENTATION_KEY>').start();
+
+
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
